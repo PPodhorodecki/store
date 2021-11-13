@@ -1,6 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
 
 {% block container %}
-<h1>Store - Welcome</h1>
+    <h1>Store - Welcome</h1>
+{% endblock %}
 
+{% block aside %}
+    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, ducimus eum fugit laborum similique temporibus velit! Autem consequuntur ea error, in laudantium neque nesciunt vel? Ab amet eligendi ipsa repudiandae!</h3>
+{% endblock %}
+
+{% block scripts %}
+{{ block.super }}
+<script src="{% static 'scripts/main.js' %}" async defer></script>
 {% endblock %}
