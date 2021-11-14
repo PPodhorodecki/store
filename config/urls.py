@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.urls import path, include
 import debug_toolbar
 
-from projects.store.config import settings
+from . import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('products', include('sklep.urls')),
     path('__debug__/', include(debug_toolbar.urls)),
+
 ]
 
 if settings.DEBUG:

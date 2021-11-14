@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Products{% endblock %}
+
+{% block container %}
+    <h1>Products</h1>
+
+    <ul>
+    {% for product in products %}
+        <li>
+            <a href="{% url 'sklep:product' product.pk %}"><span>Name: {{ product.name }}</span></a>
+        </li>
+        {% empty %}
+        <p>0 products</p>
+
+    {% endfor %}
+    </ul>
+
+{% endblock %}
